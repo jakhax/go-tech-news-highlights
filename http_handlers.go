@@ -14,6 +14,8 @@ import (
 
 func handleGetSources(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
+	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	apiKey, ok := os.LookupEnv("APIKEY")
 	if !ok {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -54,7 +56,8 @@ func handleGetSources(w http.ResponseWriter, r *http.Request) {
 }
 func handleGetSourceArticles(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
+	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	apiKey, ok := os.LookupEnv("APIKEY")
 	if !ok {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -103,7 +106,8 @@ func handleGetSourceArticles(w http.ResponseWriter, r *http.Request) {
 
 func handleGetSourceTopHeadlines(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
-	w.Header().Set("Content-Type", "application/json")
+	w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
+	w.Header().Set("Access-Control-Allow-Methods", "GET")
 	apiKey, ok := os.LookupEnv("APIKEY")
 	if !ok {
 		w.WriteHeader(http.StatusInternalServerError)
