@@ -15,7 +15,7 @@ import (
 func handleGetSources(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	if PRODUCTION {
-		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io/go-tech-news-highlights")
+		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io")
 	} else {
 		w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
 	}
@@ -61,7 +61,7 @@ func handleGetSources(w http.ResponseWriter, r *http.Request) {
 func handleGetSourceArticles(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	if PRODUCTION {
-		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io/go-tech-news-highlights")
+		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io")
 	} else {
 		w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
 	}
@@ -115,7 +115,7 @@ func handleGetSourceArticles(w http.ResponseWriter, r *http.Request) {
 func handleGetSourceTopHeadlines(w http.ResponseWriter, r *http.Request) {
 	w.Header().Set("Content-Type", "application/json")
 	if PRODUCTION {
-		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io/go-tech-news-highlights")
+		w.Header().Set("Access-Control-Allow-Origin", "https://jakhax.github.io")
 	} else {
 		w.Header().Set("Access-Control-Allow-Origin", "http://127.0.0.1:4200")
 	}
