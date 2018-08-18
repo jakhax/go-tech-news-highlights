@@ -1,0 +1,29 @@
+<div class="row">
+  <nb-card>
+    <nb-card-body>Hi, Welcome to Tech news highlights</nb-card-body>
+  </nb-card>
+</div>
+
+
+<div class="row">
+    <div class="col-xxxl-9 col-xl-12">
+      <h1>Tech News Sources</h1>
+    </div>
+</div>
+<div class="row">
+        <div class="col-xxxl-3 col-md-6" *ngFor="let source of getNewsSources.sources">
+            <nb-card status="success">
+                <nb-card-header>{{source.name}} </nb-card-header>
+                <nb-card-body>
+                    {{source.description}}
+                    
+                </nb-card-body>
+                <nb-card-footer>
+                    <button (click)=viewArticle(source.id) type="button" class="btn btn-hero-primary">
+                        See articles
+                      </button>
+                </nb-card-footer>
+              </nb-card>
+        </div>
+
+</div>
