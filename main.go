@@ -32,9 +32,12 @@ type Article struct {
 	PublishedAt string `json: "publishedAt"`
 }
 
+var PRODUCTION bool = true
+
 func main() {
+
 	err := godotenv.Load()
-	if err != nil {
+	if err != nil && PRODUCTION == false {
 		log.Fatal("Error:", err)
 	}
 	createServer()
