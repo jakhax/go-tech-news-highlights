@@ -30,9 +30,10 @@ type Article struct {
 	Url         string `json: "url"`
 	UrlToImage  string `json: "urlToImage"`
 	PublishedAt string `json: "publishedAt"`
+	Source      Source `json: "source"`
 }
 
-var PRODUCTION bool = true
+var PRODUCTION bool = false
 
 func main() {
 
