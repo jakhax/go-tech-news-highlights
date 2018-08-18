@@ -33,7 +33,7 @@ type Article struct {
 	Source      Source `json: "source"`
 }
 
-var PRODUCTION bool = false
+var PRODUCTION bool = true
 
 func main() {
 
