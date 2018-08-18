@@ -1,0 +1,25 @@
+{
+	"ImportPath": "github.com/jakhax/go-tech-news-highlights",
+	"GoVersion": "go1.10",
+	"GodepVersion": "v80",
+	"Packages": [
+		"./..."
+	],
+	"Deps": [
+		{
+			"ImportPath": "github.com/gorilla/handlers",
+			"Comment": "v1.4.0",
+			"Rev": "7e0847f9db758cdebd26c149d0ae9d5d0b9c98ce"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Comment": "v1.6.2-5-ge48e440",
+			"Rev": "e48e440e4c92e3251d812f8ce7858944dfa3331c"
+		},
+		{
+			"ImportPath": "github.com/joho/godotenv",
+			"Comment": "v1.2.0-12-g1709ab1",
+			"Rev": "1709ab122c988931ad53508747b3c061400c2984"
+		}
+	]
+}
