@@ -10,13 +10,15 @@ import {GoNewsApiService} from "../technews/services/go-news-api.service"
 })
 export class ArticleComponent implements OnInit {
 
+  p:number;
+
   goHome(){
     this.router.navigate(["/pages/technews"])
   }
   pageChanged(p){
     console.log(p)
   }
-  constructor(private route: ActivatedRoute, private getArticle:GoNewsApiService,private router:Router) {
+  constructor(private route: ActivatedRoute, public getArticle:GoNewsApiService,private router:Router) {
     this.route.params.subscribe( params => this.getArticle.getArticles(params["id"]).then(()=>{
       console.log(this.getArticle.articles)
     }) );

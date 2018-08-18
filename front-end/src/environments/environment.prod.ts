@@ -5,5 +5,5 @@
  */
 export const environment = {
   production: true,
-  apiEndPoint: "https://go-tech-news-highlights.herokuapp.com",
+  apiEndPoint: "https://tech-news-highlights.herokuapp.com",
 };

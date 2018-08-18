@@ -13,7 +13,7 @@ export class TechNewsComponent implements OnInit {
   urlToImage:string ="https://i.imgur.com/th5yZb8.jpg"
  
 
-  constructor(private getNewsSources:GoNewsApiService,private router:Router) {
+  constructor(public getNewsSources:GoNewsApiService,private router:Router) {
   
   }
   viewArticle(id){
