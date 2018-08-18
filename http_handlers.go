@@ -159,9 +159,12 @@ func createServer() {
 	muxRouter.HandleFunc("/sources", handleGetSources).Methods("GET")
 	muxRouter.HandleFunc("/articles/{source_id}", handleGetSourceArticles).Methods("GET")
 	muxRouter.HandleFunc("/top-headlines/{source_id}", handleGetSourceTopHeadlines).Methods("GET")
-
+	port := "8000"
+	if PRODUCTION {
+		port = os.Getenv("PORT")
+	}
 	s := http.Server{
-		Addr:    ":8000",
+		Addr:    ":" + port,
 		Handler: handlers.LoggingHandler(os.Stdout, muxRouter),
 	}
 	log.Fatal(s.ListenAndServe())
